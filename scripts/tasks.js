@@ -6,9 +6,12 @@ console.log("Tasks linked.");
 // To make middle earth, write a function called makeMiddleEarth that returns the string "Hello Middle Earth!".
 
 // WRITE YOUR CODE HERE
+function makeMiddleEarth () {
+  return 'Hello Middle Earth!';
+}
 
 // TESTING TASK 1
-// testMakeMiddleEarth();
+testMakeMiddleEarth();
 
 // Task 2: Put hobbits on the map
 // To add the hobbits to The Shire, write a function called takeAttendance that returns the length of the 'hobbits' array.
@@ -16,17 +19,22 @@ console.log("Tasks linked.");
 var hobbits = ["Frodo Baggins", "Samwise 'Sam' Gamgee", "Meriadoc 'Merry' Brandybuck", "Peregrin 'Pippin' Took"];
 
 // WRITE YOUR CODE HERE
+function takeAttendance () {
+  return hobbits.length;
+}
 
 // TESTING TASK 2
-// testTakeAttendance();
+testTakeAttendance();
 
 // Task 3: Give Frodo the ring
 // To give Frodo the ring, write a function called keepSecret that takes in a string parameter and returns that string in all lower case. Hint: look up a JavaScript string method for this.
 
 // WRITE YOUR CODE HERE
-
+function keepSecret(house) {
+  return house.toLowerCase();
+}
 // TESTING TASK 3
-// testKeepSecret();
+testKeepSecret();
 
 // try clicking on the ring to hear something earsplitting!
 
@@ -37,9 +45,14 @@ var hobbits = ["Frodo Baggins", "Samwise 'Sam' Gamgee", "Meriadoc 'Merry' Brandy
 var partySize = 4;
 
 // WRITE YOUR CODE HERE
-
+function doubleParty () {
+  while (partySize < 8) {
+    partySize++;
+  }
+  return partySize;
+}
 // TESTING TASK 4
-// testDoubleParty();
+testDoubleParty();
 
 // click on Strider to see a transformation!
 
@@ -50,18 +63,25 @@ function travelAbroad() {
   var shire = ["Frodo Baggins", "Samwise Gamgee", "Merry Brandybuck", "Pippin Took"];
   var rivendell = [];
   // WRITE YOUR CODE HERE
+  shire.forEach((hobbit) => { 
+    rivendell.push(hobbit);
+  });
+  return rivendell;
 }
 
 // TESTING TASK 5
-// testTravelAbroad();
+testTravelAbroad();
 
 // Task 6: Forge the fellowship
 // To forge the fellowship, write a function called declareAllegiance that takes in a member (a string, such as 'Sam') and concatenates it into a string to return "I, Sam, am part of the fellowship!"
 
 // WRITE YOUR CODE HERE
+function declareAllegiance (string) {
+  return "I, " + string + ", am part of the fellowship!"; 
+}
 
 // TESTING TASK 6
-// testDeclareAllegiance();
+testDeclareAllegiance();
 
 // click on Rivendell to hear a tune!
 
@@ -72,10 +92,12 @@ function travelAbroad() {
 
 function slayTheBalrog() {
   // WRITE YOUR CODE HERE
+  var gandalf = "Gandalf";
+  return `${gandalf} the Grey says: You shall not pass! ${gandalf} the Grey is now ${gandalf} the white.`;
 }
 
 // TESTING TASK 7
-// testSlayTheBalrog();
+testSlayTheBalrog();
 
 // Task 8: Blow the Horn of Gondor
 // Observe the function with the Boromir object below. Have the function return the value of calling the blowHorn function on boromir. Docs: https://www.w3schools.com/js/js_object_methods.asp
